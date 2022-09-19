@@ -15,6 +15,7 @@ namespace University_Management_System
         public Form1()
         {
             InitializeComponent();
+            messagebox.show();
         }
     }
 }
