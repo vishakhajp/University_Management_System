@@ -15,12 +15,21 @@ namespace University_Management_System
         public Form1()
         {
             InitializeComponent();
-            messagebox.show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "Hello";
         }
     }
 }
