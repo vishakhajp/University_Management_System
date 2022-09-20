@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Students : Form
     {
-        public Form1()
+        public Students()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }
