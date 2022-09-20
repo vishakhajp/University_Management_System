@@ -728,7 +728,7 @@
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel16.Controls.Add(this.label66);
             this.panel16.Controls.Add(this.panel18);
-            this.panel16.Location = new System.Drawing.Point(270, 322);
+            this.panel16.Location = new System.Drawing.Point(285, 322);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(312, 133);
             this.panel16.TabIndex = 57;
@@ -753,9 +753,9 @@
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel15.Controls.Add(this.pictureBox22);
             this.panel15.Controls.Add(this.label36);
-            this.panel15.Location = new System.Drawing.Point(304, 132);
+            this.panel15.Location = new System.Drawing.Point(285, 109);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(615, 170);
+            this.panel15.Size = new System.Drawing.Size(662, 170);
             this.panel15.TabIndex = 56;
             // 
             // pictureBox22
@@ -1134,6 +1134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1261, 717);
             this.Controls.Add(this.label68);
             this.Controls.Add(this.panel17);
