@@ -16,5 +16,10 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
+
+        private void Departments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
