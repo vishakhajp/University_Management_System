@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -120,11 +119,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse5 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel8.SuspendLayout();
@@ -1128,31 +1122,6 @@
             this.panel1.Size = new System.Drawing.Size(7, 719);
             this.panel1.TabIndex = 34;
             // 
-            // gunaElipse1
-            // 
-            this.gunaElipse1.Radius = 20;
-            this.gunaElipse1.TargetControl = this.panel2;
-            // 
-            // gunaElipse2
-            // 
-            this.gunaElipse2.Radius = 30;
-            this.gunaElipse2.TargetControl = this.panel5;
-            // 
-            // gunaElipse3
-            // 
-            this.gunaElipse3.Radius = 35;
-            this.gunaElipse3.TargetControl = this.panel15;
-            // 
-            // gunaElipse4
-            // 
-            this.gunaElipse4.Radius = 35;
-            this.gunaElipse4.TargetControl = this.panel16;
-            // 
-            // gunaElipse5
-            // 
-            this.gunaElipse5.Radius = 35;
-            this.gunaElipse5.TargetControl = this.panel17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1340,11 +1309,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaElipse gunaElipse2;
-        private Guna.UI.WinForms.GunaElipse gunaElipse3;
-        private Guna.UI.WinForms.GunaElipse gunaElipse4;
-        private Guna.UI.WinForms.GunaElipse gunaElipse5;
     }
 }
 
