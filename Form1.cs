@@ -29,7 +29,7 @@ namespace University_Management_System
 
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            txtName.Text = "Hello";
+            txtName.Text = "Hello world";
         }
     }
 }
