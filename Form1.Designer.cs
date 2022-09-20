@@ -88,7 +88,6 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -752,7 +751,6 @@
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel15.Controls.Add(this.pictureBox22);
-            this.panel15.Controls.Add(this.label36);
             this.panel15.Location = new System.Drawing.Point(285, 109);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(662, 170);
@@ -767,16 +765,6 @@
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 34;
             this.pictureBox22.TabStop = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(28, 10);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(142, 25);
-            this.label36.TabIndex = 32;
-            this.label36.Text = "RK University";
             // 
             // label35
             // 
@@ -1200,7 +1188,6 @@
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1286,7 +1273,6 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
