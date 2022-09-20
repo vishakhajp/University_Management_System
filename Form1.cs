@@ -22,14 +22,6 @@ namespace University_Management_System
 
         }
 
-        private void TxtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSubmit_Click(object sender, EventArgs e)
-        {
-            txtName.Text = "Hello world";
-        }
+       
     }
 }
