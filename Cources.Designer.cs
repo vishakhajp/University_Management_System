@@ -53,6 +53,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label68 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -288,11 +289,21 @@
             this.panel2.Size = new System.Drawing.Size(85, 6);
             this.panel2.TabIndex = 81;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(383, 150);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 17);
+            this.label9.TabIndex = 82;
+            this.label9.Text = "Cource Name";
+            // 
             // Cources
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 717);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
@@ -357,5 +368,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label9;
     }
 }
