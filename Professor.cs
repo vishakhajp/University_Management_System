@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
-    public partial class Departments : Form
+    public partial class Professor : Form
     {
-        public Departments()
+        public Professor()
         {
             InitializeComponent();
         }
 
-        private void Departments_Load(object sender, EventArgs e)
+        private void Label11_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
+        private void Label16_Click(object sender, EventArgs e)
         {
 
         }
