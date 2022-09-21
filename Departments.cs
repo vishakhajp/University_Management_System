@@ -22,9 +22,6 @@ namespace University_Management_System
 
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
