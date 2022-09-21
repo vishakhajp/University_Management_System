@@ -22,7 +22,7 @@ namespace University_Management_System
 
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
 
         }
