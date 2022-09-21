@@ -16,5 +16,15 @@ namespace University_Management_System
         {
             InitializeComponent();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
