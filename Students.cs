@@ -34,7 +34,7 @@ namespace University_Management_System
 
         private void Reset()
         {
-            //DepName.Text = "";
+            //DepName.Text = "",;;;;
             //stdTb.Text = "";
             //stdGencb.SelectedIndex = - 1;
             //PhoneTb.Text = "";
