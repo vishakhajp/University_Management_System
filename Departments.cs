@@ -17,11 +17,6 @@ namespace University_Management_System
             InitializeComponent();
         }
 
-        private void Departments_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
