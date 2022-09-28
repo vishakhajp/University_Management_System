@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace University_Management_System
 {
-    public partial class Cources : Form
+    public partial class Fees : Form
     {
-        public Cources()
+        public Fees()
         {
             InitializeComponent();
         }
 
-       
+        
     }
 }
