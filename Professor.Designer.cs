@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Professor));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProDGV = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Edit = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PrGender = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProAdd = new System.Windows.Forms.TextBox();
+            this.ProExpe = new System.Windows.Forms.TextBox();
+            this.ProName = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,16 +65,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ProQuali = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DepName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.DepId = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Salary = new System.Windows.Forms.TextBox();
+            this.ProDOB = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -86,15 +86,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ProDGV
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(237, 346);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(178, 281);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(937, 311);
+            this.dataGridView1.Size = new System.Drawing.Size(703, 253);
             this.dataGridView1.TabIndex = 163;
             // 
             // panel3
@@ -106,28 +105,26 @@
             this.panel3.Size = new System.Drawing.Size(939, 4);
             this.panel3.TabIndex = 162;
             // 
-            // button2
+            // Delete
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(889, 267);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(667, 217);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 36);
+            this.button2.Size = new System.Drawing.Size(82, 29);
             this.button2.TabIndex = 161;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Edit
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(668, 267);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(501, 217);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 36);
+            this.button1.Size = new System.Drawing.Size(82, 29);
             this.button1.TabIndex = 160;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
@@ -146,13 +143,12 @@
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // comboBox1
+            // PrGender
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(644, 150);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(483, 122);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 24);
+            this.comboBox1.Size = new System.Drawing.Size(105, 21);
             this.comboBox1.TabIndex = 156;
             // 
             // label12
@@ -185,29 +181,26 @@
             this.label9.TabIndex = 152;
             this.label9.Text = "Professor Name";
             // 
-            // textBox3
+            // ProAdd
             // 
-            this.textBox3.Location = new System.Drawing.Point(812, 140);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(609, 114);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 98);
+            this.textBox3.Size = new System.Drawing.Size(141, 80);
             this.textBox3.TabIndex = 151;
             // 
-            // textBox2
+            // ProExpe
             // 
-            this.textBox2.Location = new System.Drawing.Point(1017, 209);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(763, 170);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 150;
             // 
-            // textBox1
+            // ProName
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 153);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(191, 124);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
+            this.textBox1.Size = new System.Drawing.Size(126, 20);
             this.textBox1.TabIndex = 149;
             // 
             // label35
@@ -283,6 +276,7 @@
             this.label68.Size = new System.Drawing.Size(123, 25);
             this.label68.TabIndex = 135;
             this.label68.Text = "Department";
+            this.label68.Click += new System.EventHandler(this.Label68_Click);
             // 
             // label7
             // 
@@ -345,6 +339,7 @@
             this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 137;
             this.label4.Text = "Professor";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // pictureBox5
             // 
@@ -377,6 +372,7 @@
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 132;
             this.label2.Text = "Student";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // pictureBox3
             // 
@@ -460,16 +456,15 @@
             this.label11.Text = "Qualification";
             this.label11.Click += new System.EventHandler(this.Label11_Click);
             // 
-            // comboBox2
+            // ProQuali
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.ProQuali.FormattingEnabled = true;
+            this.ProQuali.Items.AddRange(new object[] {
             "Masters",
             "PHD"});
-            this.comboBox2.Location = new System.Drawing.Point(1017, 139);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Location = new System.Drawing.Point(763, 113);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 24);
+            this.comboBox2.Size = new System.Drawing.Size(104, 21);
             this.comboBox2.TabIndex = 167;
             // 
             // label15
@@ -482,12 +477,11 @@
             this.label15.TabIndex = 169;
             this.label15.Text = "Department";
             // 
-            // textBox5
+            // DepName
             // 
-            this.textBox5.Location = new System.Drawing.Point(453, 210);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Location = new System.Drawing.Point(340, 171);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 22);
+            this.textBox5.Size = new System.Drawing.Size(126, 20);
             this.textBox5.TabIndex = 168;
             // 
             // label16
@@ -501,13 +495,12 @@
             this.label16.Text = "Dep Id";
             this.label16.Click += new System.EventHandler(this.Label16_Click);
             // 
-            // comboBox3
+            // DepId
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(255, 219);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Location = new System.Drawing.Point(191, 178);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(115, 24);
+            this.comboBox3.Size = new System.Drawing.Size(87, 21);
             this.comboBox3.TabIndex = 170;
             // 
             // label17
@@ -520,20 +513,19 @@
             this.label17.TabIndex = 173;
             this.label17.Text = "Salary";
             // 
-            // textBox6
+            // Salary
             // 
-            this.textBox6.Location = new System.Drawing.Point(644, 210);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(483, 171);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(139, 22);
+            this.textBox6.Size = new System.Drawing.Size(105, 20);
             this.textBox6.TabIndex = 172;
             // 
-            // dateTimePicker1
+            // ProDOB
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(452, 150);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(339, 122);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(164, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(124, 20);
             this.dateTimePicker1.TabIndex = 175;
             // 
             // label13
@@ -551,31 +543,31 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1189, 718);
+            this.ClientSize = new System.Drawing.Size(892, 583);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.Salary);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.DepId);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.DepName);
+            this.Controls.Add(this.ProQuali);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ProDGV);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.PrGender);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ProAdd);
+            this.Controls.Add(this.ProExpe);
+            this.Controls.Add(this.ProName);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label8);
@@ -602,7 +594,7 @@
             this.Name = "Professor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Professor";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -619,18 +611,18 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProDGV;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Edit;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PrGender;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ProAdd;
+        private System.Windows.Forms.TextBox ProExpe;
+        private System.Windows.Forms.TextBox ProName;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label8;
@@ -655,14 +647,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ProQuali;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox DepName;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox DepId;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox Salary;
+        private System.Windows.Forms.DateTimePicker ProDOB;
         private System.Windows.Forms.Label label13;
     }
 }

@@ -16,6 +16,32 @@ namespace University_Management_System
         public Departments()
         {
             InitializeComponent();
+            Dep();
+        }
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Goral\Source\Repos\vishakhajp\University_Management_System\AppData\RK.mdf;Integrated Security=True");
+        int Key = 0;
+        private void Dep()
+        {
+           
+
+            con.Open();
+            string query = "select  * from department";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlCommandBuilder build = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            DepDGV.DataSource = ds.Tables[0];
+
+            con.Close();
+        }
+
+        private void Reset()
+        {
+            DepName.Text = "";
+            Intake.Text = "";
+            DepFees.Text = "";
+
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -25,9 +51,7 @@ namespace University_Management_System
 
         private void Save_Click(object sender, EventArgs e)
         {
-            string con = @"Data Source=DESKTOP-4T7S6O5\SQLEXPRESS;Initial Catalog=E:\VISHAKHAJP\UNIVERSITY_MANAGEMENT_SYSTEM\APPDATA\RK.MDF;Integrated Security=True";
-            SqlConnection sql = new SqlConnection(con);
-
+            
             if (DepName.Text == "" || Intake.Text == "" || DepFees.Text == "") 
             {
                 MessageBox.Show("Information Missing");
@@ -36,16 +60,18 @@ namespace University_Management_System
             {
                 try
                 {
-                    sql.Open();
+                    con.Open();
                     string query = "Insert into Departments (Depname,DepIntake,DepFees) values(@DN,@DI,@DF)";
 
-                    SqlCommand cmd = new SqlCommand(query, sql);
+                    SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@DN", DepName.Text);
                     cmd.Parameters.AddWithValue("@DI", Intake.Text);
                     cmd.Parameters.AddWithValue("@DF", DepFees.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Information Added");
-                    sql.Close();
+                    con.Close();
+                    Dep();
+                    Reset();
                 }
                 catch (Exception Ex)
                 {
@@ -53,5 +79,91 @@ namespace University_Management_System
                 }
             }
         }
+
+        private void DepDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DepName.Text = DepDGV.SelectedRows[0].Cells[1].Value.ToString();
+            Intake.Text = DepDGV.SelectedRows[0].Cells[2].Value.ToString();
+            DepFees.Text = DepDGV.SelectedRows[0].Cells[3].Value.ToString();
+            if(DepName.Text == "")
+            {
+                Key = 0;
+                /*DepName.Text = "";
+                DepFees.Text = "";
+                Intake.Text = "";*/
+            }
+            else
+            {
+                Key = Convert.ToInt32(DepDGV.SelectedRows[0].Cells[1].Value.ToString());
+            }
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            if (DepName.Text == "" || Intake.Text == "" || DepFees.Text == "")
+            {
+                MessageBox.Show("Information Missing");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    string query =" Update Departments set Depname=@DN, DepIntake=@DI, DepFees=@DF where DepId=@Key";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@DN", DepName.Text);
+                    cmd.Parameters.AddWithValue("@DI", Intake.Text);
+                    cmd.Parameters.AddWithValue("@DF", DepFees.Text);
+                    cmd.Parameters.AddWithValue("@Key", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Department Updated");
+                    con.Close();
+                    Dep();
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (Key==0)
+            {
+                MessageBox.Show("Select The Department");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    string query = " Delete from Departments where DepId=@Key";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Key", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Deparment Deleted");
+                    con.Close();
+                    Dep();
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+            Students obj = new Students();
+            obj.Show();
+            this.Hide();
+        }
+
+        
     }
 }
