@@ -142,7 +142,7 @@
             this.Save.TabIndex = 159;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
+            this.Save.Click += new System.EventHandler(this.Save_Click_1);
             // 
             // PrGender
             // 

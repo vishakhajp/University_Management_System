@@ -147,42 +147,7 @@ namespace University_Management_System
             this.Hide();
         }
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-            if (ProName.Text == "" || ProAdd.Text == "" || DepName.Text == "" || PrGender.SelectedIndex == -1 || ProAdd.Text == "" || ProQuali.SelectedIndex == -1 || DepId.SelectedIndex == -1)
-            {
-                MessageBox.Show("Information Missing");
-            }
-            else
-            {
-                try
-                {
-                    con.Open();
-                    string query = "Insert into Professor (PrName,PrDOB,PrGen,PrAdd,PrQual,PrExp,PrDepId,PrDepName,PrSalary) values(@PN,@PDOB,@PG,@PA,@PQ,@PE,@PD,@PDN,@PS)";
-
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@PN", ProName.Text);
-                    cmd.Parameters.AddWithValue("@PDOB", ProDOB.Value.Date);
-                    cmd.Parameters.AddWithValue("@PG", PrGender.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@PA", ProAdd.Text);
-                    cmd.Parameters.AddWithValue("@PQ", ProQuali.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@PE", ProExpe.Text);
-                    cmd.Parameters.AddWithValue("@PD", DepId.SelectedValue.ToString());
-                    cmd.Parameters.AddWithValue("@PDN", DepName.Text);
-                    cmd.Parameters.AddWithValue("@PS", Salary.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Professor Added");
-                    con.Close();
-                    Pro();
-                    Reset();
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message);
-                }
-            }
-
-        }
+       
 
         private void ProDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -244,9 +209,42 @@ namespace University_Management_System
             }
         }
 
-        private void Save_Click(object sender, EventArgs e)
-        {
+       
 
+        private void Save_Click_1(object sender, EventArgs e)
+        {
+            if (ProName.Text == "" || ProAdd.Text == "" || DepName.Text == "" || PrGender.SelectedIndex == -1 || ProAdd.Text == "" || ProQuali.SelectedIndex == -1 || DepId.SelectedIndex == -1)
+            {
+                MessageBox.Show("Information Missing");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    string query = "Insert into Professor (PrName,PrDOB,PrGen,PrAdd,PrQual,PrExp,PrDepId,PrDepName,PrSalary) values(@PN,@PDOB,@PG,@PA,@PQ,@PE,@PD,@PDN,@PS)";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@PN", ProName.Text);
+                    cmd.Parameters.AddWithValue("@PDOB", ProDOB.Value.Date);
+                    cmd.Parameters.AddWithValue("@PG", PrGender.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@PA", ProAdd.Text);
+                    cmd.Parameters.AddWithValue("@PQ", ProQuali.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@PE", ProExpe.Text);
+                    cmd.Parameters.AddWithValue("@PD", DepId.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@PDN", DepName.Text);
+                    cmd.Parameters.AddWithValue("@PS", Salary.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Professor Added");
+                    con.Close();
+                    Pro();
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }

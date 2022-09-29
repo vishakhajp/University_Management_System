@@ -48,8 +48,8 @@ namespace University_Management_System
         private void Reset()
         {
             DepNameTb.Text = "";
-            StdTb.Text = "";
-            StdGenCb.SelectedIndex = - 1;
+            StdTb.Text = "";.
+            StdGenCb.Selected.Index = - 1;
             PhoneTb.Text = "";
             StdAddTb.Text = "";
             DepIdCb.SelectedIndex = -1;
