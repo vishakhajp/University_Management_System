@@ -16,11 +16,24 @@ namespace University_Management_System
         public Students()
         {
             InitializeComponent();
-            ShowStudent();
+            ShowStudents();
+            GetDepId();
         }
-
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Goral\Source\Repos\vishakhajp\University_Management_System\AppData\RK.mdf;Integrated Security=True");
-        private void ShowStudent()
+        private void GetDepId()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select DepNum from Department", con);
+            SqlDataReader Rdr;
+            Rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("DepNum", typeof(int));
+            dt.Load(Rdr);
+            DepIdCb.ValueMember = "DepNum";
+            DepIdCb.DataSource = dt;
+            con.Close();
+        }
+        private void ShowStudents()
         {
             con.Open();
             string query = "select * from Student";
@@ -28,18 +41,18 @@ namespace University_Management_System
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            //Student.DataSource = ds.Tables[0];
+            StdDGV.DataSource = ds.Tables[0];
             con.Close();
         }
 
         private void Reset()
         {
-            //DepName.Text = "",;;;;
-            //stdTb.Text = "";
-            //stdGencb.SelectedIndex = - 1;
-            //PhoneTb.Text = "";
-            //StdAddTb.Text = "";
-            //depIdCb.selectedIndex = -1;
+            DepNameTb.Text = "";
+            StdTb.Text = "";
+            StdGenCb.SelectedIndex = - 1;
+            PhoneTb.Text = "";
+            StdAddTb.Text = "";
+            DepIdCb.SelectedIndex = -1;
 
         }
 

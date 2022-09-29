@@ -30,18 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StdDGV = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.StdGenCb = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StdAddTb = new System.Windows.Forms.TextBox();
+            this.StdTb = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,12 +66,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DepNameTb = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PhoneTb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DepIdCb = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -92,15 +92,15 @@
             this.panel4.Size = new System.Drawing.Size(100, 5);
             this.panel4.TabIndex = 126;
             // 
-            // dataGridView1
+            // StdDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(220, 321);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(807, 242);
-            this.dataGridView1.TabIndex = 125;
+            this.StdDGV.BackgroundColor = System.Drawing.Color.White;
+            this.StdDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StdDGV.Location = new System.Drawing.Point(220, 321);
+            this.StdDGV.Name = "StdDGV";
+            this.StdDGV.Size = new System.Drawing.Size(807, 242);
+            this.StdDGV.TabIndex = 125;
             // 
             // panel3
             // 
@@ -148,20 +148,13 @@
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // textBox4
+            // StdGenCb
             // 
-            this.textBox4.Location = new System.Drawing.Point(771, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(102, 22);
-            this.textBox4.TabIndex = 119;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(543, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 24);
-            this.comboBox1.TabIndex = 118;
+            this.StdGenCb.FormattingEnabled = true;
+            this.StdGenCb.Location = new System.Drawing.Point(543, 144);
+            this.StdGenCb.Name = "StdGenCb";
+            this.StdGenCb.Size = new System.Drawing.Size(87, 24);
+            this.StdGenCb.TabIndex = 118;
             // 
             // label12
             // 
@@ -197,20 +190,20 @@
             this.label9.TabIndex = 114;
             this.label9.Text = "Student";
             // 
-            // textBox3
+            // StdAddTb
             // 
-            this.textBox3.Location = new System.Drawing.Point(642, 144);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(118, 86);
-            this.textBox3.TabIndex = 113;
+            this.StdAddTb.Location = new System.Drawing.Point(642, 144);
+            this.StdAddTb.Multiline = true;
+            this.StdAddTb.Name = "StdAddTb";
+            this.StdAddTb.Size = new System.Drawing.Size(118, 86);
+            this.StdAddTb.TabIndex = 113;
             // 
-            // textBox1
+            // StdTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(223, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 22);
-            this.textBox1.TabIndex = 111;
+            this.StdTb.Location = new System.Drawing.Point(223, 146);
+            this.StdTb.Name = "StdTb";
+            this.StdTb.Size = new System.Drawing.Size(126, 22);
+            this.StdTb.TabIndex = 111;
             // 
             // label35
             // 
@@ -483,12 +476,12 @@
             this.label15.TabIndex = 131;
             this.label15.Text = "Dep Name";
             // 
-            // textBox2
+            // DepNameTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(891, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 22);
-            this.textBox2.TabIndex = 130;
+            this.DepNameTb.Location = new System.Drawing.Point(891, 144);
+            this.DepNameTb.Name = "DepNameTb";
+            this.DepNameTb.Size = new System.Drawing.Size(146, 22);
+            this.DepNameTb.TabIndex = 130;
             // 
             // label16
             // 
@@ -501,12 +494,12 @@
             this.label16.TabIndex = 133;
             this.label16.Text = "Phone";
             // 
-            // textBox5
+            // PhoneTb
             // 
-            this.textBox5.Location = new System.Drawing.Point(223, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(126, 22);
-            this.textBox5.TabIndex = 132;
+            this.PhoneTb.Location = new System.Drawing.Point(223, 208);
+            this.PhoneTb.Name = "PhoneTb";
+            this.PhoneTb.Size = new System.Drawing.Size(126, 22);
+            this.PhoneTb.TabIndex = 132;
             // 
             // label17
             // 
@@ -527,34 +520,42 @@
             this.comboBox2.Size = new System.Drawing.Size(141, 24);
             this.comboBox2.TabIndex = 134;
             // 
+            // DepIdCb
+            // 
+            this.DepIdCb.FormattingEnabled = true;
+            this.DepIdCb.Location = new System.Drawing.Point(771, 142);
+            this.DepIdCb.Name = "DepIdCb";
+            this.DepIdCb.Size = new System.Drawing.Size(87, 24);
+            this.DepIdCb.TabIndex = 136;
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1039, 608);
+            this.Controls.Add(this.DepIdCb);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PhoneTb);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DepNameTb);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StdDGV);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.StdGenCb);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.StdAddTb);
+            this.Controls.Add(this.StdTb);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label8);
@@ -580,7 +581,7 @@
             this.Name = "Students";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -598,18 +599,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView StdDGV;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox StdGenCb;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox StdAddTb;
+        private System.Windows.Forms.TextBox StdTb;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label8;
@@ -635,10 +635,11 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DepNameTb;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox DepIdCb;
     }
 }

@@ -26,5 +26,10 @@ namespace University_Management_System
         {
 
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
