@@ -59,7 +59,7 @@ namespace University_Management_System
             dt.Columns.Add("DepId", typeof(int));
             dt.Load(rdr);
             DepId.ValueMember = "DepId";
-            ProDGV.DataSource = dt;
+            DepId.DataSource = dt;
 
             con.Close();
         
@@ -68,7 +68,7 @@ namespace University_Management_System
         private void GetDepName()
         {
             con.Open();
-            string query = "select * from Department where DepId= '+DepId.SelectedValue.ToString()'";
+            string query = "select * from Department where DepId=" +DepId.SelectedValue.ToString();
             SqlCommand cmd = new SqlCommand(query, con);
 
             DataTable dt = new DataTable();
@@ -151,17 +151,17 @@ namespace University_Management_System
 
         private void ProDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ProName.Text = ProDGV.SelectedRows[0].Cells[1].Value.ToString();
-            ProDOB.Text =ProDGV.SelectedRows[0].Cells[2].Value.ToString();
-            PrGender.SelectedItem =ProDGV.SelectedRows[0].Cells[3].Value.ToString();
-            ProAdd.Text = ProDGV.SelectedRows[0].Cells[4].Value.ToString();
-            ProQuali.SelectedItem = ProDGV.SelectedRows[0].Cells[5].Value.ToString();
-            ProExpe.Text = ProDGV.SelectedRows[0].Cells[6].Value.ToString();
-            DepId.SelectedValue = ProDGV.SelectedRows[0].Cells[7].Value.ToString();
-            DepName.Text = ProDGV.SelectedRows[0].Cells[8].Value.ToString();
-            Salary.Text = ProDGV.SelectedRows[0].Cells[9].Value.ToString();
+            ProName.Text = ProDGV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            ProDOB.Text =ProDGV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            PrGender.SelectedItem =ProDGV.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ProAdd.Text = ProDGV.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ProQuali.SelectedItem = ProDGV.Rows[e.RowIndex].Cells[5].Value.ToString();
+            ProExpe.Text = ProDGV.Rows[e.RowIndex].Cells[6].Value.ToString();
+            DepId.SelectedValue = ProDGV.Rows[e.RowIndex].Cells[7].Value.ToString();
+            DepName.Text = ProDGV.Rows[e.RowIndex].Cells[8].Value.ToString();
+            Salary.Text = ProDGV.Rows[e.RowIndex].Cells[9].Value.ToString();
             if (ProName.Text == "")
-            {
+            { 
                 Key = 0;
                 /*DepName.Text = "";
                 DepFees.Text = "";
@@ -169,13 +169,13 @@ namespace University_Management_System
             }
             else
             {
-                Key = Convert.ToInt32(ProDGV.SelectedRows[0].Cells[0].Value.ToString());
+                Key = Convert.ToInt32(ProDGV.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
 
         private void Edit_Click(object sender, EventArgs e)
         {
-            if (ProName.Text == "" || ProAdd.Text == "" || DepName.Text == "" || PrGender.SelectedIndex == -1 || ProAdd.Text == "" || ProQuali.SelectedIndex == -1 || DepId.SelectedIndex == -1)
+            if (ProName.Text == "" || ProAdd.Text == ""|| DepName.Text == "" || PrGender.SelectedIndex == -1 || ProAdd.Text == "" || ProQuali.SelectedIndex == -1 || DepId.SelectedIndex == -1)
             {
                 MessageBox.Show("Information Missing");
             }
@@ -184,7 +184,7 @@ namespace University_Management_System
                 try
                 {
                     con.Open();
-                    string query = "Update Professor set PrName=@PN,PrDOB=@PDOB,PrGen=@PG,PrAdd=@PA,PrQual=@PQ,PrExp=@PE,PrDepId@PD,PrDepName=@PDN,PrSalary=@PS where PrId=@PrKey";
+                    string query = "Update Professor set PrName=@PN,PrDOB=@PDOB,PrGen=@PG,PrAdd=@PA,PrQual=@PQ,PrExp=@PE,PrDepId=@PD,PrDepName=@PDN,PrSalary=@PS where PrId=@PrKey";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@PN", ProName.Text);
                     cmd.Parameters.AddWithValue("@PDOB", ProDOB.Value.Date);
@@ -245,6 +245,13 @@ namespace University_Management_System
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

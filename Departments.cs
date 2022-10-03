@@ -21,6 +21,7 @@ namespace University_Management_System
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Goral\Source\Repos\vishakhajp\University_Management_System\AppData\RK.mdf;Integrated Security=True");
         int Key = 0;
+
         private void Dep()
         {
            
@@ -61,7 +62,7 @@ namespace University_Management_System
                 try
                 {
                     con.Open();
-                    string query = "Insert into Departments (Depname,DepIntake,DepFees) values(@DN,@DI,@DF)";
+                    string query = "Insert into Department (DepName,DepIntake,DepFees) values(@DN,@DI,@DF)";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@DN", DepName.Text);
@@ -82,9 +83,9 @@ namespace University_Management_System
 
         private void DepDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DepName.Text = DepDGV.SelectedRows[0].Cells[1].Value.ToString();
-            Intake.Text = DepDGV.SelectedRows[0].Cells[2].Value.ToString();
-            DepFees.Text = DepDGV.SelectedRows[0].Cells[3].Value.ToString();
+            DepName.Text = DepDGV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Intake.Text = DepDGV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            DepFees.Text = DepDGV.Rows[e.RowIndex].Cells[3].Value.ToString();
             if(DepName.Text == "")
             {
                 Key = 0;
@@ -94,7 +95,7 @@ namespace University_Management_System
             }
             else
             {
-                Key = Convert.ToInt32(DepDGV.SelectedRows[0].Cells[1].Value.ToString());
+                Key = Convert.ToInt32(DepDGV.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
 
@@ -109,7 +110,7 @@ namespace University_Management_System
                 try
                 {
                     con.Open();
-                    string query =" Update Departments set Depname=@DN, DepIntake=@DI, DepFees=@DF where DepId=@Key";
+                    string query =" Update Department set DepName=@DN, DepIntake=@DI, DepFees=@DF where DepId=@Key";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@DN", DepName.Text);
@@ -140,7 +141,7 @@ namespace University_Management_System
                 try
                 {
                     con.Open();
-                    string query = " Delete from Departments where DepId=@Key";
+                    string query = " Delete from Department where DepId=@Key";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Key", Key);
@@ -164,6 +165,47 @@ namespace University_Management_System
             this.Hide();
         }
 
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            Professor obj = new Professor();
+            obj.Show();
+            this.Hide();
         
+         }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+            Cources obj = new Cources();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+            Fees obj = new Fees();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
+    
+    
