@@ -21,5 +21,10 @@ namespace University_Management_System
         {
 
         }
+
+        private void DepDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -421,6 +421,7 @@
             this.DepDGV.Name = "DepDGV";
             this.DepDGV.Size = new System.Drawing.Size(762, 294);
             this.DepDGV.TabIndex = 87;
+            this.DepDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DepDGV_CellContentClick);
             // 
             // Departments
             // 
