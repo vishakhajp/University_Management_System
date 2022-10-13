@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Departments));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label68 = new System.Windows.Forms.Label();
@@ -116,6 +118,7 @@
             this.label7.Size = new System.Drawing.Size(60, 25);
             this.label7.TabIndex = 63;
             this.label7.Text = "Fees";
+            this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
             // pictureBox8
             // 
@@ -149,6 +152,7 @@
             this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 61;
             this.label5.Text = "Courses";
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // pictureBox6
             // 
@@ -171,6 +175,7 @@
             this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 59;
             this.label4.Text = "Professor";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // pictureBox5
             // 
@@ -204,6 +209,7 @@
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 54;
             this.label2.Text = "Student";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // pictureBox3
             // 
@@ -226,6 +232,7 @@
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 52;
             this.label1.Text = "Home";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // pictureBox1
             // 
@@ -248,6 +255,7 @@
             this.label8.Size = new System.Drawing.Size(78, 25);
             this.label8.TabIndex = 67;
             this.label8.Text = "Logout";
+            this.label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // pictureBox9
             // 
@@ -281,13 +289,14 @@
             this.label6.Size = new System.Drawing.Size(74, 25);
             this.label6.TabIndex = 65;
             this.label6.Text = "Salary";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Red;
-            this.label35.Location = new System.Drawing.Point(535, 48);
+            this.label35.Location = new System.Drawing.Point(525, 48);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(87, 29);
@@ -299,7 +308,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(506, 24);
+            this.label34.Location = new System.Drawing.Point(489, 24);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(169, 29);
@@ -379,6 +388,7 @@
             this.Save.TabIndex = 82;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Edit
             // 
@@ -391,6 +401,7 @@
             this.Edit.TabIndex = 83;
             this.Edit.Text = "Edit";
             this.Edit.UseVisualStyleBackColor = false;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Delete
             // 
@@ -403,6 +414,7 @@
             this.Delete.TabIndex = 84;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // panel3
             // 
@@ -416,9 +428,25 @@
             // 
             this.DepDGV.BackgroundColor = System.Drawing.Color.White;
             this.DepDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DepDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DepDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DepDGV.Location = new System.Drawing.Point(181, 277);
             this.DepDGV.Name = "DepDGV";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DepDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DepDGV.Size = new System.Drawing.Size(762, 294);
             this.DepDGV.TabIndex = 87;
             this.DepDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DepDGV_CellContentClick);
